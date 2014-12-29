@@ -1,0 +1,40 @@
+* { margin: 0; padding: 0; border: 0; }
+a { text-decoration: none; border: 0px; color: #000; }
+a:hover { text-decoration: none; border: 0px; }
+h1, h2, h3, h4, h5, h6 { font-size: 12px; font-weight: normal; font-family: "宋体"; }
+body { font-family: "宋体"; font-size: 12px; font-weight: normal; color: #333; }
+ul li, ol li { list-style-type: none; text-decoration: none; }
+#MicroBox { background-color: #fff; float: left; width: 100%; position: relative; }
+/* 微服务通用头部 */
+.MicroServe_top { margin: 0 auto; width: 1000px; }
+.MicroServe_top .Micro_logo { float: left; height: 99px; }
+/* 微服务通用底部 */
+.MicroFor .MicroFor_For { width: 920px; height: 130px; padding: 20px 40px; text-align: center; margin: 0 auto }
+.MicroFor .MicroFor_For dl { width: 950px; height: 50px; }
+.MicroFor .MicroFor_For dl dt { float: right; padding-left: 25px; background: url(../images/MicroFor3.gif) no-repeat left center; line-height: 50px; font-family: "微软雅黑"; color: #6b6b6b; }
+.MicroFor .MicroFor_For dl dd { display: inline; line-height: 25px; color: #717171; }
+.MicroFor .MicroFor_For dl dd a { color: #717171; }
+/* 微信多-登录 */
+.MicroCer .MicroLogin { width: 1000px; height: 507px; margin: 0 auto; background: url("../images/login_bg_1.jpg") no-repeat; }
+.MicroCer .MicroLogin dl { float: right; width: 347px; display: inline; background: rgba(239,239,239,0.7); background: #efefef\9; *background:#efefef;
+margin-top: 70px; border-radius: 5px; padding-bottom: 40px; }
+.MicroCer .MicroLogin dl strong { display: block; color: #666666; margin: 25px; font-size: 14px; }
+.MicroCer .MicroLogin dl dd { float: left; margin: 0 0 20px 27px; width: 320px; }
+.MicroCer .MicroLogin dl dd span { float: left; width: 130px; text-align: right; line-height: 38px; font-family: "微软雅黑"; font-size: 16px; }
+.MicroCer .MicroLogin dl dd a { float: left; line-height: 38px; margin-left: 10px; display: inline; text-decoration: underline; color: #0069be; }
+.MicroCer .MicroLogin .UserName, .MicroCer .MicroLogin .Password, .MicroCer .MicroLogin .authcode { float: left; width: 260px; height: 40px; line-height: 40px; padding: 0 10px; border: 1px #d4d4d4 solid; transition-duration: 0.3s; }
+.MicroCer .MicroLogin .authcode { width: 100px; float: left; }
+.authcode_pic { margin-left: 5px; float: left; }
+.hline { float: left; margin: 5px 0 0 5px; }
+.MicroCer .MicroLogin .hline .flk13 { margin: 0; line-height: 20px; text-decoration: none }
+.MicroCer .MicroLogin dl dt { margin: 0 0 20px 27px; display: block; float: left; }
+.MicroCer .MicroLogin dl dt label { float: left; line-height: 20px; margin-right: 10px; color: #666666; }
+.MicroCer .MicroLogin dl dt a { float: left; line-height: 50px; font-weight: bold; color: #0069be; }
+.MicroCer .MicroLogin .checkbox { float: left; margin: 3px 5px 0 0; }
+.MicroCer .MicroLogin .login_btn { float: left; width: 282px; height: 44px; font-size: 18px; font-family: "微软雅黑"; color: #fff; border: none; border-radius: 2px; cursor: pointer }
+.MicroCer .MicroLogin .Btn-A .login_btn { background: url("../images/bg.png") 0 -144px repeat-x; }
+.MicroCer .MicroLogin .Btn-A:hover .login_btn { background: url("../images/bg.png") 0 -194px repeat-x; }
+.plg_lb_cls { left: 18px !important; top: 3px !important; }
+.MicroCon_lg { width: 100% !important; height: 507px !important; background: url("../images/loginbg_wrap_1.jpg") no-repeat center top; margin: 0 auto; clear: both }
+.plg_lb_val { position: relative; display: inline-block }
+.plg_lb_cls { position: absolute; left: 0px; top: 0px; color: #999999; font-weight: normal; cursor: text !important; font-size: 12px; }

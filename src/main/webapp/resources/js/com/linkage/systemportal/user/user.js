@@ -1,0 +1,1 @@
+com.linkage.systemportal.user = new Object();

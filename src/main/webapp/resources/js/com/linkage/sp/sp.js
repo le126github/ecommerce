@@ -1,0 +1,1 @@
+com.linkage.sp = new Object();

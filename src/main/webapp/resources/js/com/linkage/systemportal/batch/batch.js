@@ -1,0 +1,1 @@
+com.linkage.systemportal.batch = new Object();

@@ -1,0 +1,1 @@
+com.linkage = new Object();

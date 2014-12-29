@@ -1,0 +1,38 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; MARGIN: 10px; COLOR: #666666; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A {
+	TEXT-DECORATION: none
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+
+
+#ImageBoxOverlay {
+	BACKGROUND-COLOR: #000
+}
+#ImageBoxCaption {
+	BACKGROUND-COLOR: #f4f4ec
+}
+#ImageBoxContainer {
+	WIDTH: 250px; HEIGHT: 250px; BACKGROUND-COLOR: #f4f4ec
+}
+#ImageBoxCaptionText {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; PADDING-BOTTOM: 5px; COLOR: #000
+}
+#ImageBoxCaptionImages {
+	MARGIN: 0px
+}
+#ImageBoxNextImage {
+	BACKGROUND-IMAGE: url(spacer.gif); BACKGROUND-COLOR: transparent
+}
+#ImageBoxPrevImage {
+	BACKGROUND-IMAGE: url(spacer.gif); BACKGROUND-COLOR: transparent
+}
+#ImageBoxNextImage:hover {
+	BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url(next_image.jpg); BACKGROUND-REPEAT: no-repeat
+}
+#ImageBoxPrevImage:hover {
+	BACKGROUND-POSITION: left bottom; BACKGROUND-IMAGE: url(prev_image.jpg); BACKGROUND-REPEAT: no-repeat
+}

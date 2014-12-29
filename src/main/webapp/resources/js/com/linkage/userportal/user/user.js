@@ -1,0 +1,1 @@
+com.linkage.userportal.user = new Object();

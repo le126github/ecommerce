@@ -1,0 +1,30 @@
+<h1>Shopping Cart</h1>
+<table style="width: 100%;" cellspacing="0" cellpadding="5">
+	<tr bgcolor="#ddd" align="center" id="tablehead">
+		<th width="220">AppName</th>
+		<th width="180">AppType</th>
+		<th width="180">Price</th>
+		<th width="90"></th>
+	</tr>
+	<tr align="center" id="lasttr">
+		<td colspan="2" height="30px">&nbsp;</td>
+		<td style="background: #ddd; font-weight: bold">Total</td>
+		<td style="background: #ddd; font-weight: bold" id="totalprice">240</td>
+	</tr>
+</table>
+<div style="float: right; width: 215px; margin-top: 20px;">
+	<p>
+		Click here to <a href="/ecommerce/myaccount.jsp?menuname=mycart"><strong>Update</strong></a>&nbsp;&nbsp;
+	</p>
+	<form action="/account/order_make.action" method="post"
+		name="makeorder">
+		<p>
+			<input type="text" name="model.appids" id="appids"
+				style="display: none;" /> <a href="javascript:empty()"
+				onclick="submitCart()">Generate order</a>
+		</p>
+	</form>
+	<p>
+		<a href="/ecommerce/index.jsp">Continue shopping</a>
+	</p>
+</div>

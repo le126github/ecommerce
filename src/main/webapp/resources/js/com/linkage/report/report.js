@@ -1,0 +1,1 @@
+com.linkage.report = new Object();

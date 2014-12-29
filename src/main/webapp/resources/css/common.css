@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, table, th, td, div, span, input, select, textarea, ul, li, dl, dt, dd, form, p, hr, img, h1, h2, h3 { padding: 0; margin: 0; }
+img { border: 0; vertical-align: bottom; }
+* { font-family: "微软雅黑", Verdana, Arial, Helvetica, sans-serif, "宋体", "黑体"; font-size: 12px; color: #3c2629; }
+body { margin: 0; background: #f2f2f2; }
+ul, li { list-style: none }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.clearfix { display: inline-block }
+* html .clearfix { height: 1% }
+.clearfix { display: block }
+.padding-left { padding-left: 25px; }
+.clear { clear: both; }
+.mainBox { width: 730px; padding: 25px 25px; background: #fff; float:left; position: relative; }
+.mainBox p { width: 100%; float: left; line-height: 30px; }
+.ipLinkA { width: 325px; height: 20px; line-height: 20px; border: 1px #aebac0 solid; padding-left: 5px; }
+.ipLinkB { width: 243px; height: 23px; line-height: 23px; border: 1px #dbd8d8 solid; padding-left: 5px; }
+.ipLinkA_width01 { width: 160px; }
+.font01 { color: #b3b3b3; }
+.font02 { color: #7d7d7d; }
+.mainBox_left { float: left; width: 325px; margin-top: 25px; }
+.mainBox_right { float: left; width: 390px; height: 550px; padding: 30px 0; margin: 25px 0 0 13px; background: #f9f9f9; border: 1px #c4c4c4 solid; }
+.home_btn { list-style: none; margin-top: 8px; height: 38px; float: left }
+.home_btn li { float: left; width: 145px; line-height: 38px; text-align: center; padding-left: 15px; color: #666; cursor: pointer; }
+.home_btn li.home_btn01 { background: url(../images/home_btn01.gif) }
+.home_btn li.home_btn02 { background: url(../images/home_btn02.gif) }
+.tab { border: #c4c4c4 1px solid; background: #dfe4f7; width: 318px; margin-top: 8px; float: left; padding-bottom: 20px; }
+.tab a.dtTwo:hover span { display:block	}
+.tab a.dtOne { width: 316px; height: 44px; line-height: 44px; background: url(../images/tab_link_tit.gif) repeat-x; color: #fff; position: relative; display: block; cursor: pointer; text-align: center; border: 1px #b6b9c6 solid; font-size: 16px; float:left }
+.tab a.dtOne:hover label { display:block}
+.back { position: absolute; top: 0; left: 0; background: url(../images/back.gif); width: 50px; height: 44px; }
+.tab a.dtTwo { position: relative; display: block; width: 288px; cursor: pointer; float:left; text-align: center; color: #000; margin-left: 14px; margin-top: 8px; font-size: 16px; }
+.dtEnd { position: relative; cursor: pointer; margin: 10px 0 0 10px; float:left; width: 300px; height: 44px; background: url(../images/count_btn.png) -3px -3px no-repeat; }
+.dtEnd:hover { background: url(../images/count_btn.png) -317px -3px; }
+.icon_add { width: 16px; height: 16px; background: url(../images/add.png) no-repeat; position: absolute; top: 11px; left: 95px; }
+.icon_addhover { background: url(../images/add_hover.png) no-repeat; }
+.tab a.tabActive { background: #7fb221; color: #fff; }
+.tab dl dd { position: absolute; width: 390px; height: 550px; padding: 30px 0; top: 70px; right: 25px; background: #f9f9f9; border: 1px #c4c4c4 solid; clear: both }
+.btnSave { background: url(../images/btn_save.gif) no-repeat; width: 110px; height: 32px; cursor: pointer; border: none; }
+.fileInput { width: 322px; height: 102px; background: url(../images/img_add.gif); overflow: hidden; position: relative; }
+.upfile { position: absolute; top: -100px; }
+.upFileBtn { width: 322px; height: 102px; opacity: 0; filter: alpha(opacity=0); cursor: pointer; }
+.tab_pg { height: 46px; margin-top: 35px; border-top: 1px #bebebe solid; line-height: 46px; }
+.lab_pg_act { float: left; width: 195px; height: 46px; text-align: center; cursor: pointer; border-left: 1px #c1c1c1 solid; margin-left: -1px; }
+.lab_pg_nor { float: left; width: 195px; height: 46px; background: #f1f0f0; text-align: center; border-left: 1px #c1c1c1 solid; border-bottom: 1px #c1c1c1 solid; cursor: pointer; margin-left: -1px; }
+.MicrositeTxt { float: left; width: 365px; text-align: center; padding: 190px 10px; font-family: "微软雅黑"; font-size: 24px; line-height: 45px; font-weight: bold; color: #c1c1c1; }
+.ui-sortable { float:left}
+.ui-sortable li { position: relative; width: 288px; cursor: pointer; height: 38px; line-height: 38px; text-align: center; border: 1px #b6b9c6 solid; background: url(../images/tab_link.gif) repeat-x; color: #000; margin-left: 14px; margin-top: 8px; font-size: 16px; }
+.ui-sortable li:hover { background:#7fb221 }
+.ui-sortable li:hover span { display:block}
+.ui-sortable li:hover a { color: #FFF }
+.editweb { position: absolute; left: 0; top: 0; height: 45px; width: 316px; background-color: #7fb221; text-align: center; z-index: 2; display: none; cursor: pointer; color:#FFF; font-size:16px; }
+.editindeximg {position:absolute; width:290px; height:100px; font-family:"微软雅黑"; font-size:18px; color:#f3f3f3; background-color:#7fb221; display:block; text-align:center; z-index:2; cursor:pointer; left:0; top:0; line-height:100px; display:none;}
+.Delete {position:absolute; top:0; right:0; width:30px; height:30px; cursor:pointer; z-index:3; display:none;}
+.del_btn { color:#09F}

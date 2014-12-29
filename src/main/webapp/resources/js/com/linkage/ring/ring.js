@@ -1,0 +1,1 @@
+com.linkage.ring = new Object();

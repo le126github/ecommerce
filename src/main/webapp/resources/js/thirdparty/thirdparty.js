@@ -1,0 +1,1 @@
+var thirdparty = new Object();

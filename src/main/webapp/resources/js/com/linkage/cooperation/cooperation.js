@@ -1,0 +1,1 @@
+com.linkage.cooperation = new Object();
