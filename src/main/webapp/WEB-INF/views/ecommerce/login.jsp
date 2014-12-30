@@ -21,9 +21,9 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$.get("/ecommerce/header_right.jsp", function(data) {
-			$("#header_right").html(data);
-		});
+		//$.get("/ecommerce/header_right.jsp", function(data) {
+		//	$("#header_right").html(data);
+		//});
 	});
 
 	function loginSubmit() {
@@ -37,7 +37,7 @@
 			verifyCode : $("#verifycodetxt").attr("value")
 		};
 
-		$.post("/account/login_submit.action", c, loginAjaxSuccess, "json");
+		$.post("/account/login_submit", c, loginAjaxSuccess, "json");
 	}
 
 	function loginAjaxSuccess(data) {

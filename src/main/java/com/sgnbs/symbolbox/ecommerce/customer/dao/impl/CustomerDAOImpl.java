@@ -1,98 +1,57 @@
-/*
- * Copyright (c) 2012, Asiainfo-Linkage. All rights reserved.<br>
- * Asiainfo-Linkage PROPRIETARY/CONFIDENTIAL. Use is subject to license terms. 
- */
 package com.sgnbs.symbolbox.ecommerce.customer.dao.impl;
 
 import java.util.List;
 
-import com.linkage.system.extend.hibernate.HibernateBaseDAOImpl;
-import com.linkage.system.utils.exception.DAOException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.sgnbs.springUtil.dao.MapAndBean;
 import com.sgnbs.symbolbox.ecommerce.customer.dao.intf.CustomerDAO;
 import com.sgnbs.symbolbox.ecommerce.customer.po.Customer;
 
-/**
- * <p>
- * <b>版权：</b>Copyright (c) 2014 松果科技.<br>
- * <b>工程：</b>OnlineShop<br>
- * <b>文件：</b>CustomerDAOImpl.java<br>
- * <b>创建时间：</b>2014-08-14 17:34:42<br>
- * <p>
- * <b>CustomerDAOImpl访问实现.</b><br>
- * </p>
- * 
- * @author lezp
- * @since 1.0.0
- */
-public class CustomerDAOImpl extends HibernateBaseDAOImpl implements
-        CustomerDAO {
+@Repository
+public class CustomerDAOImpl implements CustomerDAO {
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.sgnbs.symbolbox.onlineshop.customer.customer.dao.intf.CustomerDAO
-     * #getAll()
-     */
-    @Override
-    @SuppressWarnings("unchecked")
-    public List<Customer> getAll() throws DAOException {
-        return this.getAll(Customer.class);
-    }
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.sgnbs.symbolbox.onlineshop.customer.customer.dao.intf.CustomerDAO
-     * #getCustomer(java.lang.Integer)
-     */
-    @Override
-    public Customer getCustomer(java.lang.Integer userid) throws DAOException {
-        return (Customer) this.getByID(Customer.class, userid);
-    }
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Customer> getAll() throws DataAccessException {
+		String sql = "SELECT * From t_user_info";
+		return (List<Customer>) MapAndBean.transMapList2BeanList(
+				jdbcTemplate.queryForList(sql), Customer.class);
+		// return jdbcTemplate.query(sql, CustomerRowMapper.getInstance());
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.sgnbs.symbolbox.onlineshop.customer.customer.dao.intf.CustomerDAO
-     * #saveCustomer(Customer)
-     */
-    @Override
-    public void saveCustomer(Customer customer) throws DAOException {
-        this.save(customer);
-    }
+	@Override
+	public Customer getCustomer(Integer userid) throws DataAccessException {
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.sgnbs.symbolbox.onlineshop.customer.customer.dao.intf.CustomerDAO
-     * #updateCustomer(Customer)
-     */
-    @Override
-    public void updateCustomer(Customer customer) throws DAOException {
-        this.merge(customer);
-    }
+		String sql = "SELECT * From t_user_info where USERID=?";
+		return (Customer) MapAndBean.transMap2Bean(
+				jdbcTemplate.queryForMap(sql, userid), Customer.class);
+	}
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.sgnbs.symbolbox.onlineshop.customer.customer.dao.intf.CustomerDAO
-     * #deleteCustomer(Customer)
-     */
-    @Override
-    public void deleteCustomer(Customer customer) throws DAOException {
-        this.delete(customer);
-    }
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Customer> getCustomersbyUserName(String username)
+			throws DataAccessException {
 
-    @Override
-    public List<Customer> getCustomersbyUserName(String username)
-            throws DAOException {
-        String hql = "from Customer Where username=?";
+		String sql = "SELECT * From t_user_info where USERNAME=?";
+		return (List<Customer>) MapAndBean.transMapList2BeanList(
+				jdbcTemplate.queryForList(sql, username), Customer.class);
+	}
 
-        return this.query(hql, username);
-    }
+	@Override
+	public void saveCustomer(Customer customer) throws DataAccessException {
+
+	}
+
+	@Override
+	public void updateCustomer(Customer customer) throws DataAccessException {
+
+	}
+
 }
