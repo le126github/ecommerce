@@ -1,4 +1,4 @@
-package com.sgnbs.springUtil.dao;
+package com.sgnbs.Util.spring.dao;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;

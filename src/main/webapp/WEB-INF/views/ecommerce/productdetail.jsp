@@ -47,7 +47,7 @@ function addcart(value){
           addsuccess, "json");
 }
 function addsuccess(data){
-    var member = eval("("+data+")");
+    var member = data;
     if(member.error=="out_time"){
         alert("please login");
         window.location.href="/ecommerce/login.jsp"; 

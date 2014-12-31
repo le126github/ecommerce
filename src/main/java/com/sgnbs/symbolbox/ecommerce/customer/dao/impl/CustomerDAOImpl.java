@@ -7,7 +7,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.sgnbs.springUtil.dao.MapAndBean;
+import com.sgnbs.Util.spring.dao.MapAndBean;
 import com.sgnbs.symbolbox.ecommerce.customer.dao.intf.CustomerDAO;
 import com.sgnbs.symbolbox.ecommerce.customer.po.Customer;
 
@@ -23,7 +23,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		String sql = "SELECT * From t_user_info";
 		return (List<Customer>) MapAndBean.transMapList2BeanList(
 				jdbcTemplate.queryForList(sql), Customer.class);
-		// return jdbcTemplate.query(sql, CustomerRowMapper.getInstance());
+		// return jdbcTemplate.queryForList(sql, CustomerRowMapper.getInstance());
 	}
 
 	@Override
@@ -46,6 +46,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public void saveCustomer(Customer customer) throws DataAccessException {
+		String sql = "INSERT INTO t_user_info() VALUES()";
+		jdbcTemplate.update(sql);
 
 	}
 

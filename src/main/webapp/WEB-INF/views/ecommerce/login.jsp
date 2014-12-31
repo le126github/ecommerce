@@ -40,7 +40,8 @@
 	}
 
 	function loginAjaxSuccess(data) {
-		var member = eval("(" + data + ")");
+		console.log(data);
+		var member = data;
 
 		if (member.error == "nofulldata") {
 			alert("full data please");
@@ -63,7 +64,7 @@
 			$("#passwordtxt").focus();
 		} else if (member.success == "success") {
 			alert("Welcome to symbolbox !");
-			window.location.href = "/ecommerce/myaccount.jsp";
+			window.location.href = "/myaccount";
 		} else {
 			alert("unknow");
 		}
@@ -105,36 +106,7 @@
 
 
 	<div id="wrap">
-		<div class="header">
-			<div class="header_nav">
-				<div class="left_logo float_l"></div>
-				<div class="right_nav float_r">
-					<div class="login-search" id="header_right"></div>
-					<div class="cleaner"></div>
-					<div class="menu">
-						<ul>
-							<li><a href="/ecommerce/index.jsp">Home</a></li>
-							<li><a href="/product/product/query_detail.action">Products</a></li>
-							<li><a href="/ecommerce/ordersymbol.jsp">Order symbol</a></li>
-							<li><a href="/ecommerce/designhouse.jsp">Design House</a></li>
-							<li><a href="/ecommerce/support.jsp">Support</a></li>
-							<li><a href="/ecommerce/aboutus.jsp">About us</a></li>
-							<li style="width: 150px;">
-								<form method="post"
-									action="/typeparam/typeparam/mod_valid.action" id="nameSearch">
-									<a href="javascript:searchSubmits()"
-										style="float: right; margin-top: 12px;"><img
-										src="/images/ecommerce/icon_search.png"></img></a> <input
-										type="text" value="" name="model.namelike" id="typeName"
-										style="width: 120px; float: right; margin-top: 16px;" />
-								</form>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="cleaner"></div>
-			</div>
-		</div>
+		<%@include file="/WEB-INF/views/ecommerce/header.jsp"%>
 
 		<div id="templatemo_main">
 			<h2>Login</h2>
@@ -162,15 +134,13 @@
 									<td>Verify&nbsp;Code:</td>
 									<td>
 										<div style="height: 42px; width: 50px; float: left;">
-											<input type="text" id="verifycodetxt" onclick=""
+											<input type="text" id="verifycodetxt"
 												style="width: 42px; height: 36px;" />
 										</div>
 										<div style="width: 100px; float: left;">
-											<img
-												onclick="javascript:this.src='/verifycode/verifycode_create.action?srand='+Math.random();"
-												id="verifycodeimage" width="100" height="42"
-												style="cursor: hand;"
-												src="/verifycode/verifycode_create.action" />
+											<img id="verifycodeimage" width="100" height="42"
+												onclick="javascript:this.src='/account/verifyCode'"
+												style="cursor: pointer;" src="/account/verifyCode" />
 										</div>
 									</td>
 
@@ -183,7 +153,7 @@
 
 								<tr>
 									<td colspan="3">&nbsp;&nbsp;&nbsp;<a
-										href="/ecommerce/forgotpassword.jsp">Forgot your password?</a></td>
+										href="/forgotpassword">Forgot your password?</a></td>
 								</tr>
 
 
@@ -207,7 +177,7 @@
 							</div>
 							<form action="" method="post" id="signinForm" name="signinForm">
 								<span> <input type="button"
-									onclick="window.location.href='register.jsp'" value="Register" />
+									onclick="window.location.href='/register'" value="Register" />
 								</span>
 							</form>
 
@@ -219,18 +189,8 @@
 		<!-- END of templatemo_main -->
 
 		<div class="cleaner"></div>
-		<div class="footer">
-			<div class="footernav">
-				<p class="flcontent float_l">
-					Copyright&copy; SymbolBox 2014.<br />All Service &copy; SymbolBox
-				</p>
-				<p class="frcontent float_r">
-					<a href="/ecommerce/index.jsp">Home</a> / <a href="#">Support</a> /
-					<a href="#">Terms and Conditions</a> / <a href="#">Faqs</a> /<a
-						href="#"> Contact us</a>
-				</p>
-			</div>
-		</div>
+		<%@include file="/WEB-INF/views/ecommerce/footer.jsp"%>
+
 	</div>
 </body>
 </html>

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.sgnbs.Util.spring.dao.intf.CRUDDao;
 import com.sgnbs.symbolbox.ecommerce.customer.bo.intf.CustomerBO;
 import com.sgnbs.symbolbox.ecommerce.customer.dao.intf.CustomerDAO;
 import com.sgnbs.symbolbox.ecommerce.customer.po.Customer;
@@ -19,6 +20,9 @@ public class CustomerBOImpl implements CustomerBO {
 
 	@Autowired
 	private CustomerDAO customerDAO;
+	
+	@Autowired
+	private CRUDDao cRUDDao;
 
 	public String getMessage() {
 		return message;
@@ -73,7 +77,7 @@ public class CustomerBOImpl implements CustomerBO {
 
 			customer.setCreatetime(new Date());
 
-			customerDAO.saveCustomer(customer);
+			cRUDDao.save(customer,"t_user_info",Customer.class);
 
 		} catch (Exception e) {
 			this.setMessage("error");

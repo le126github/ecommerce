@@ -19,9 +19,8 @@ import java.io.Serializable;
  * @author lezp
  * @since 1.0.0
  */
+@SuppressWarnings("serial")
 public class Customer implements Serializable {
-
-    private static final long serialVersionUID = 1L;
     
     private java.lang.Integer userid;
     
@@ -60,10 +59,6 @@ public class Customer implements Serializable {
     private java.lang.String rsv1;
 
     private java.lang.String rsv2;
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 
 	public java.lang.Integer getUserid() {
 		return userid;
@@ -216,8 +211,7 @@ public class Customer implements Serializable {
 	public void setRsv2(java.lang.String rsv2) {
 		this.rsv2 = rsv2;
 	}
-    
-    
+
 
 }
 

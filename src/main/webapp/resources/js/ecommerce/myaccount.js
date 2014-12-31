@@ -19,11 +19,6 @@ $(document).ready(function() {
 	} else {
 		$("#account_infomation_href").click();
 	}
-
-	$.get("/ecommerce/header_right.jsp", function(data) {
-		$("#header_right").html(data);
-	});
-
 });
 
 function onclickmenu(theObject) {
@@ -452,7 +447,7 @@ function orderInformationInitSuccess() {
 					"/productappinfo/productapp/query_detail.action?scode="
 							+ nameandpriceArray[2]);
 		}
-		for ( var i = 1; i < apps.length; i++) {
+		for (var i = 1; i < apps.length; i++) {
 			$("#tableorder" + thisorderid).append(ordertableelement);
 
 			// rename id
