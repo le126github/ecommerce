@@ -18,7 +18,7 @@
 					<li><a href="/designhouse">Design House</a></li>
 					<li><a href="/support">Support</a></li>
 					<li><a href="/aboutus">About us</a></li>
-					<li style="width: 150px;">
+					<!-- <li style="width: 150px;">
 						<form method="post" action="/typeparam/typeparam/mod_valid.action"
 							id="nameSearch">
 							<a href="javascript:searchSubmits()"
@@ -27,7 +27,7 @@
 								type="text" value="" name="model.namelike" id="typeName"
 								style="width: 120px; float: right; margin-top: 16px;" />
 						</form>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
